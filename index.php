@@ -11,13 +11,13 @@
   <input type="text" id="nome" name="nome" value="Daniela"><br>
   <label for="cognome">Cognome:</label><br>
   <input type="text" id="cognome" name="cognome" value="Moneta"><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Cerca">
 </form>
 
+<br>
 <h3>Cerca gli appartenenti alla seguente provincia</h3>
 <form action="/provincia.php" method="GET">
   <label for="provincia">Scegli provincia:</label>
-
   <select name="provincia" id="provincia">
     <?php
       require_once 'connection.php';
@@ -27,8 +27,12 @@
         echo '<option value="'.$row[0].'">'.$row[0].'</option>';
       }
     ?>
-  </select>
-  <input type="submit" value="Submit">
+  </select><br>
+
+  <label for="limit">Record per pagina:</label>
+  <input type="text" id="limit" name="limit" value="" style="width:3em"><br>
+  <input type="hidden" id="page" name="page" value="1"><br>
+  <input type="submit" value="Cerca">
 </form>
 </body>
 </html>
