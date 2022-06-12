@@ -30,7 +30,7 @@
   </select><br>
 
   <label for="limit">Record per pagina:</label>
-  <input type="text" id="limit" name="limit" value="" style="width:3em"><br>
+  <input type="text" id="limit" name="limit" value="20" style="width:3em"><br>
   <input type="hidden" id="page" name="page" value="1"><br>
   <input type="submit" value="Cerca">
 </form>
